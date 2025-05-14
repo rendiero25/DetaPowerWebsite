@@ -1,0 +1,66 @@
+[
+    {
+        "categoryId": 1,
+        "categoryName": "Dynamo",
+        "categoryProducts": [
+            {
+                "id": 1,
+                "name": "DTG164",
+                "image": "/website-detapower/public/productImages/dtg164-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg164-description.jpg"
+                
+            },
+
+            {
+                "id": 2,
+                "name": "DTG184",
+                "image": "/website-detapower/public/productImages/dtg184-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg184-description.jpg"
+            },
+
+            {
+                "id": 3,
+                "name": "DTG224",
+                "image": "/website-detapower/public/productImages/dtg224-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg224-description.jpg"
+            },
+
+            {
+                "id": 4,
+                "name": "DTG274",
+                "image": "/website-detapower/public/productImages/dtg274-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg274-description.jpg"
+            },
+
+            {
+                "id": 5,
+                "name": "DTG314",
+                "image": "/website-detapower/public/productImages/dtg314-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg314-description.jpg"
+            },
+
+            {
+                "id": 6,
+                "name": "DTG354",
+                "image": "/website-detapower/public/productImages/dtg354-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg354-description.jpg"
+            },
+
+            {
+                "id": 7,
+                "name": "DTG404",
+                "image": "/website-detapower/public/productImages/dtg404-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg404-description.jpg"
+            },   
+
+            {
+                "id": 8,
+                "name": "DTG454",
+                "image": "/website-detapower/public/productImages/dtg454-image.jpg",
+                "description": "/website-detapower/public/productImages/dtg454-description.jpg"
+            }
+        ]
+    }
+
+    
+]
