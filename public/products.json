@@ -7,60 +7,338 @@
                 "id": 1,
                 "name": "DTG164",
                 "image": "/website-detapower/public/productImages/dtg164-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg164-description.jpg"
-                
+                "description": "/website-detapower/public/productImages/dtg164-description.jpg",
+                "model": null
             },
 
             {
                 "id": 2,
                 "name": "DTG184",
                 "image": "/website-detapower/public/productImages/dtg184-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg184-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg184-description.jpg",
+                "model": null
             },
 
             {
                 "id": 3,
                 "name": "DTG224",
                 "image": "/website-detapower/public/productImages/dtg224-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg224-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg224-description.jpg",
+                "model": null
             },
 
             {
                 "id": 4,
                 "name": "DTG274",
                 "image": "/website-detapower/public/productImages/dtg274-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg274-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg274-description.jpg",
+                "model": null
             },
 
             {
                 "id": 5,
                 "name": "DTG314",
                 "image": "/website-detapower/public/productImages/dtg314-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg314-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg314-description.jpg",
+                "model": null
             },
 
             {
                 "id": 6,
                 "name": "DTG354",
                 "image": "/website-detapower/public/productImages/dtg354-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg354-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg354-description.jpg",
+                "model": null
             },
 
             {
                 "id": 7,
                 "name": "DTG404",
                 "image": "/website-detapower/public/productImages/dtg404-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg404-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg404-description.jpg",
+                "model": null
             },   
 
             {
                 "id": 8,
                 "name": "DTG454",
                 "image": "/website-detapower/public/productImages/dtg454-image.jpg",
-                "description": "/website-detapower/public/productImages/dtg454-description.jpg"
+                "description": "/website-detapower/public/productImages/dtg454-description.jpg",
+                "model": null
+            }
+        ]
+    },
+
+    {
+        "categoryId": 2,
+        "categoryName": "Open Diesel Generator",
+        "categoryProducts": [
+            {
+                "id": 21,
+                "name": "Cummins",
+                "image": [
+                    "/website-detapower/public/productImages/cummins-image1.jpg",
+                    "/website-detapower/public/productImages/cummins-image2.jpg",
+                    "/website-detapower/public/productImages/cummins-image3.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/cummins-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": null
+                    }
+                ]
+            },
+
+            {
+                "id": 22,
+                "name": "Yuchai",
+                "image": [
+                    "/website-detapower/public/productImages/yuchai-image1.jpg",
+                    "/website-detapower/public/productImages/yuchai-image2.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/yuchai-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/yuchai-modelimage60.jpg"
+                    }
+                ]
+            },
+
+            {
+                "id": 23,
+                "name": "Weichai",
+                "image": "/website-detapower/public/productImages/weichai-image1.jpg",
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/weichai-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/weichai-modelimage60.jpg"
+                    }
+                ]
+            },
+
+            {
+                "id": 24,
+                "name": "Shangchai",
+                "image": [
+                    "/website-detapower/public/productImages/shangchai-image1.jpg",
+                    "/website-detapower/public/productImages/shangchai-image2.jpg",
+                    "/website-detapower/public/productImages/shangchai-image3.jpg",
+                    "/website-detapower/public/productImages/shangchai-image4.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/shangchai-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/shangchai-modelimage60.jpg"
+                    }
+                ]
+            },
+
+            {
+                "id": 25,
+                "name": "Xichai",
+                "image": [
+                    "/website-detapower/public/productImages/xichai-image1.jpg",
+                    "/website-detapower/public/productImages/xichai-image2.jpg",
+                    "/website-detapower/public/productImages/xichai-image3.jpg",
+                    "/website-detapower/public/productImages/xichai-image4.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/xichai-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/xichai-modelimage60.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "categoryId": 3,
+        "categoryName": "Silent Box Diesel Generator",
+        "categoryProducts": [
+            {
+                "id": 31,
+                "name": "Cummins",
+                "image": [
+                    "/website-detapower/public/productImages/cumminssilentbox-image1.jpg",
+                    "/website-detapower/public/productImages/cumminssilentbox-image2.jpg",
+                    "/website-detapower/public/productImages/cumminssilentbox-image3.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/cumminssilentbox-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": null
+                    }
+                ]
+            },
+
+            {
+                "id": 32,
+                "name": "Yuchai",
+                "image": [
+                    "/website-detapower/public/productImages/yuchaisilentbox-image1.jpg",
+                    "/website-detapower/public/productImages/yuchaisilentbox-image2.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/yuchaisilentbox-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/yuchaisilentbox-modelimage60.jpg"
+                    }
+                ]
+            },
+
+            {
+                "id": 33,
+                "name": "Weichai",
+                "image": "/website-detapower/public/productImages/weichaisilentbox-image1.jpg",
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/weichaisilentbox-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/weichaisilentbox-modelimage60.jpg"
+                    }
+                ]
+            },
+
+            {
+                "id": 34,
+                "name": "Xichai",
+                "image": [
+                    "/website-detapower/public/productImages/xichaisilentbox-image1.jpg",
+                    "/website-detapower/public/productImages/xichaisilentbox-image2.jpg",
+                    "/website-detapower/public/productImages/xichaisilentbox-image3.jpg",
+                    "/website-detapower/public/productImages/xichaisilentbox-image4.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/xichaisilentbox-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/xichaisilentbox-modelimage60.jpg"
+                    }
+                ]
+            },
+
+            {
+                "id": 35,
+                "name": "Shangchai",
+                "image": [
+                    "/website-detapower/public/productImages/shangchaisilentbox-image1.jpg",
+                    "/website-detapower/public/productImages/shangchaisilentbox-image2.jpg",
+                    "/website-detapower/public/productImages/shangchaisilentbox-image3.jpg",
+                    "/website-detapower/public/productImages/shangchaisilentbox-image4.jpg"
+                ],
+                "description": null,
+                "model": [
+                    {
+                        "modelName": "50HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/shangchaisilentbox-modelimage50.jpg"
+                    },
+                    {
+                        "modelName": "60HZ Model List",
+                        "modelImage": "/website-detapower/public/productImages/shangchaisilentbox-modelimage60.jpg"
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "categoryId": 4,
+        "categoryName": "Mobile Trailer",
+        "categoryProducts": [
+            {
+                "id": 41,
+                "name": "Container",
+                "image": [
+                    "/website-detapower/public/productImages/container-image1.jpg",
+                    "/website-detapower/public/productImages/container-image2.jpg",
+                    "/website-detapower/public/productImages/container-image3.jpg",
+                    "/website-detapower/public/productImages/container-image3.jpg"
+                ],
+                "description": "",
+                "model": null
+            }
+        ]
+    },
+
+    {
+        "categoryId": 5,
+        "categoryName": "Control System",
+        "categoryProducts": [
+            {
+                "id": 51,
+                "name": "Automatic Switch",
+                "image": [
+                    "/website-detapower/public/productImages/automaticswitch-image1.jpg",
+                    "/website-detapower/public/productImages/automaticswitch-image2.jpg"
+                ],
+                "description": "/website-detapower/public/productImages/automaticswitch-description.jpg",
+                "model": null
+            },
+
+            {
+                "id": 52,
+                "name": "Controller",
+                "image": [
+                    "/website-detapower/public/productImages/controller-image1.jpg",
+                    "/website-detapower/public/productImages/controller-image2.jpg",
+                    "/website-detapower/public/productImages/controller-image3.jpg",
+                    "/website-detapower/public/productImages/controller-image3.jpg"
+                ],
+                "description": "/website-detapower/public/productImages/controller-description.jpg",
+                "model": null
+            },
+
+            {
+                "id": 53,
+                "name": "Parallel Systen",
+                "image": "/website-detapower/public/productImages/parallelsystem-image1.jpg",
+                "description": "/website-detapower/public/productImages/parallelsystem-description.jpg",
+                "model": null
             }
         ]
     }
-
-    
 ]

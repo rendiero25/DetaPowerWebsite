@@ -1,9 +1,27 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import TopMenu from './components/TopMenu.jsx';
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Index from './pages/Index.jsx';
+
 const App = () => {
   return (
-    <div>
-      <h1>Welcome to the Detapower Website</h1>
-      <p>This is a simple React application.</p>
-    </div>
+    <Router>
+      <div className='m-0 p-0 box-border font-primary'>
+
+        <TopMenu />
+        <Header />
+
+        <Routes>
+          <Route path='/' element={<Index/>} />
+        </Routes>
+
+        <Footer />
+
+      </div>
+    </Router>
   );
 }
 
