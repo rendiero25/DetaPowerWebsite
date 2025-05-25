@@ -2,6 +2,7 @@
 
 @theme {
     --color-primary: #009C84;
+    --color-black: #1E1E1E;
     --font-primary: "Roboto", sans-serif;
 
     --breakpoint-xl: 80rem; /* 1280 x 768 */
