@@ -5,7 +5,7 @@ import imageProduct2 from "../../public/productImages/cumminssilentbox-image1.jp
 
 const ProductRange = () => {
     return(
-        <div className="px-6 sm:px-8 xl:px-32">
+        <div className="px-6 sm:px-8 xl:px-32 mt-10">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="flex flex-col justify-center items-start gap-4">
                     <div className="flex flex-row justify-center items-center gap-4">
@@ -31,9 +31,9 @@ const ProductRange = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center items-center">
-                    <img src={imageProduct1} alt="Product-image1" className="w-[20rem]" />
-                    <img src={imageProduct2} alt="product-image2" className="w-[15rem] -mt-8" />
+                <div className="flex flex-col xl:flex-row justify-center items-center">
+                    <img src={imageProduct1} alt="Product-image1" className="w-[20rem] xl:w-[30rem]" />
+                    <img src={imageProduct2} alt="product-image2" className="w-[15rem] xl:w-[30rem] -mt-8" />
                 </div>
             </div>
         </div>
