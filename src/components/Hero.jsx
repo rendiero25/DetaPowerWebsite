@@ -5,6 +5,8 @@ import 'swiper/css/navigation';
 
 import Banner1 from '../assets/banner1.jpg';
 import Banner2 from '../assets/banner2.jpg';
+import Banner3 from '../assets/banner3.jpg';
+import Banner4 from '../assets/banner4.jpg';
 
 const Hero = () => {
     return(
@@ -19,6 +21,12 @@ const Hero = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src={Banner2} alt="Banner1-image" className='w-full h-screen object-cover'/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={Banner3} alt="Banner1-image" className='w-full h-screen object-cover'/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={Banner4} alt="Banner1-image" className='w-full h-screen object-cover'/>
                     </SwiperSlide>
             </Swiper>
 
