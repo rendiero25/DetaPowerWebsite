@@ -9,7 +9,7 @@ import Testimonial from '../components/Testimonial';
 const Index = () => {
     return(
         <div className="">
-            <div className='w-full min-h-screen'>
+            <div className='w-full xl:min-h-screen'>
                 <Hero/>
             </div>
             
