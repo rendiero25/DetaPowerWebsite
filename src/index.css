@@ -11,3 +11,18 @@
     --breakpoint-4xl: 160rem; /* 2560 x 1440 */
     --breakpoint-5xl: 240rem; /* 3840 x 2160 */
 }
+
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideup {
+  animation: slideup 0.7s cubic-bezier(0.4,0,0.2,1) both;
+}
