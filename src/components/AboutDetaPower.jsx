@@ -9,10 +9,10 @@ import Service from '../assets/service.jpg';
 const AboutDetaPower = () => {
     return(
         <div className="-mt-10 w-full">
-            <div className="relative w-full h-[40rem] flex flex-col justify-center items-center">
+            <div className="relative w-full h-[40rem] flex flex-col justify-center items-start">
                 <div className='absolute z-20 px-6 xl:px-25 3xl:px-65 4xl:px-85 flex flex-col justify-center items-start gap-6'>
-                    <h1 className='font-bold text-4xl text-white max-w-xs leading-tight uppercase'>Fujian Deta Electric Co.,LTD. High-Tech Enterprises</h1>
-                    <p className='font-normal text-md text-white leading-normal'>
+                    <h1 className='font-bold text-4xl xl:text-5xl text-white max-w-xs xl:max-w-3xl leading-tight uppercase'>Fujian Deta Electric Co.,LTD. High-Tech Enterprises</h1>
+                    <p className='font-normal text-md text-white leading-normal xl:max-w-3xl'>
                         Deta Electric has passed ISO9001:2008, CE, VOV certification, and its products are 
                         exported to more than 90 countries and regions in Europe, America, the Middle East, 
                         Africa, Asia, etc. The products are widely used in many fields such as agriculture, 
@@ -20,15 +20,15 @@ const AboutDetaPower = () => {
                         industry), hotels, airports, etc.
                     </p>
                     <div className='grid grid-cols-3 justify-center items-center'>
-                        <img src={Security} alt="security-image" className="w-25"/>
-                        <img src={Advance} alt="security-image" className="w-25" />
-                        <img src={Environmental} alt="security-image" className="w-25" />
-                        <img src={Quality} alt="security-image" className="w-25" />
-                        <img src={Reputation} alt="security-image" className="w-25" />
-                        <img src={Service} alt="security-image" className="w-25" />
+                        <img src={Security} alt="security-image" className="w-25 xl:w-43"/>
+                        <img src={Advance} alt="security-image" className="w-25 xl:w-43" />
+                        <img src={Environmental} alt="security-image" className="w-25 xl:w-43" />
+                        <img src={Quality} alt="security-image" className="w-25 xl:w-43" />
+                        <img src={Reputation} alt="security-image" className="w-25 xl:w-43" />
+                        <img src={Service} alt="security-image" className="w-25 xl:w-43" />
                     </div>
                 </div>
-                <div className='absolute w-full h-full bg-gradient-to-r from-primary to-primary/50'></div>
+                <div className='absolute w-full h-full bg-gradient-to-r from-primary via-primary/90 to-white/70'></div>
                 <img src={BuildingBackground} alt="building-background" className='w-full h-full object-cover'/>
             </div>
         </div>

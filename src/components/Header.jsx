@@ -31,13 +31,13 @@ const Header = () => {
 
                 <div className='hidden xl:flex flex-row justify-between items-center w-auto'>
                     <ul className='flex flex-row justify-between items-center gap-8 text-black font-normal text-lg'>
-                        <li onClick={goToHome} className='font-bold text-xl 5xl:text-3xl uppercase'>
+                        <li onClick={goToHome} className='font-bold text-lg 5xl:text-3xl uppercase'>
                             Home
                         </li>
 
                         <div className='relative flex flex-col justify-between items-center gap-2 5xl:gap-6' onMouseEnter={openProductMenu} onMouseLeave={closeProductMenu}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-xl 5xl:text-3xl uppercase'>About</li>
+                                <li className='font-bold text-lg 5xl:text-3xl uppercase'>About</li>
                                 <MdOutlineArrowDropDown className='text-black size-6'/>
                             </div>
                             
@@ -62,7 +62,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2' onMouseEnter={openProductMenu} onMouseLeave={closeProductMenu}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-xl 5xl:text-3xl uppercase'>Products</li>
+                                <li className='font-bold text-lg 5xl:text-3xl uppercase'>Products</li>
                                 <MdOutlineArrowDropDown className='text-black size-6'/>
                             </div>
                             
@@ -91,7 +91,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2' onMouseEnter={openProductMenu} onMouseLeave={closeProductMenu}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-xl 5xl:text-3xl uppercase'>Service</li>
+                                <li className='font-bold text-lg 5xl:text-3xl uppercase'>Service</li>
                                 <MdOutlineArrowDropDown className='text-black size-6'/>
                             </div>
                             
@@ -116,7 +116,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2' onMouseEnter={openProductMenu} onMouseLeave={closeProductMenu}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-xl 5xl:text-3xl uppercase'>Contact</li>
+                                <li className='font-bold text-lg 5xl:text-3xl uppercase'>Contact</li>
                                 <MdOutlineArrowDropDown className='text-black size-6'/>
                             </div>
                             

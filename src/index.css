@@ -2,6 +2,9 @@
 
 @theme {
     --color-primary: #009C84;
+    --color-secondary: #D9D9D9;
+    --color-tertiary: #313030;
+    --color-accent: #F2F2F2;
     --color-black: #1E1E1E;
     --font-primary: "Roboto", sans-serif;
 
