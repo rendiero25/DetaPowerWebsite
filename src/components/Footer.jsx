@@ -8,11 +8,11 @@ import Pinterest from '../assets/pinterest.png';
 const Footer = () => {
     return(
         <div className="bg-accent w-full h-auto px-6 xl:px-25 3xl:px-65 4xl:px-85">
-            <div className="flex flex-col justify-between items-center gap-2">
-                <div className="w-full flex flex-col xl:flex-row pt-8 pb-4 xl:pt-16 xl:pb-6 justify-between items-start gap-16">
-                    <div className="flex flex-col justify-center items-start gap-8">
+            <div className="flex flex-col justify-between items-center gap-8 xl:gap-2">
+                <div className="w-full flex flex-col xl:flex-row pt-8 pb-4 xl:pt-16 xl:pb-6 justify-between items-start gap-6 xl:gap-16">
+                    <div className="flex flex-col justify-center items-start gap-4 xl:gap-8">
                         <h2 className="font-bold text-xl text-black">Quick Links</h2>
-                        <ul className="flex flex-col justify-center items-start gap-2">
+                        <ul className="flex flex-wrap xl:flex-col xl:justify-center items-start gap-6 xl:gap-2">
                             <li className="text-md font-normal text-gray-400">Home</li>
                             <li className="text-md font-normal text-gray-400">Company Profile</li>
                             <li className="text-md font-normal text-gray-400">Product</li>
@@ -25,7 +25,7 @@ const Footer = () => {
 
                     <div className="flex flex-col justify-center items-start gap-8">
                         <h2 className="font-bold text-xl text-black">Products</h2>
-                        <ul className="flex flex-col justify-center items-start gap-2">
+                        <ul className="flex flex-wrap xl:flex-col xl:justify-center items-start gap-6 xl:gap-2">
                             <li className="text-md font-normal text-gray-400">Dynamo</li>
                             <li className="text-md font-normal text-gray-400">Open Diesel Generator</li>
                             <li className="text-md font-normal text-gray-400">Silent Box Diesel Generator</li>
@@ -47,7 +47,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="bg-primary px-10 py-12 h-full w-[25rem]">
+                    <div className="bg-primary px-6 py-12 h-full w-full xl:w-[25rem]">
                         <h2 className="text-white font-bold text-xl">Message</h2>
                         <form
                             action="mailto:detapowergensetindonesia@gmail.com"
@@ -82,7 +82,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-row justify-center items-center gap-2'>
+                <div className='flex flex-row justify-center items-center self-start gap-2'>
                     <img src={Facebook} alt="facebook-icon" className='size-8' />
                     <img src={Linkedin} alt="linkedin-icon" className='size-8' />
                     <img src={Twitter} alt="twitter-icon" className='size-8' />
@@ -90,7 +90,7 @@ const Footer = () => {
                     <img src={Pinterest} alt="pinterest-icon" className='size-8' />
                 </div>
 
-                <h3 className='mt-14 mb-4 text-sm'>Copyright &copy; Fujian Deta Electric Co., Ltd. Developed by <span className='font-bold text-md'><a href="http://www.rendiero.dev">Rendiero</a></span></h3>
+                <h3 className=' mt- xl:mt-14 mb-4 text-xl xl:text-sm'>Copyright &copy; Fujian Deta Electric Co., Ltd. Developed by <span className='font-bold text-md'><a href="http://www.rendiero.dev">Rendiero</a></span></h3>
             </div>
         </div>
     )

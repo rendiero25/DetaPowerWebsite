@@ -23,7 +23,7 @@ const Header = () => {
     const closeProductMenu = () => {setOpenProductMenu(false)};
 
     return(
-        <div className="w-full py-6 4xl:py-8 5xl:py-12">
+        <div className="w-full py-4 4xl:py-8 5xl:py-12">
             <div className='px-6 xl:px-25 3xl:px-65 4xl:px-85 flex flex-row justify-between items-center w-full'>
                 <div className=''>
                     <img src={Logo} alt="detapower-logo" className='w-55 4xl:w-65 5xl:w-90' />

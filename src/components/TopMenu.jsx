@@ -19,8 +19,8 @@ const TopMenu = () => {
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex flex-row justify-between items-center gap-2">
-                            <FaPhoneAlt className="text-white size-5 5xl:size-7"/>
-                            <h3 className="text-white font-normal text-sm 4xl:text-lg 5xl:text-2xl">{mobile ? "Phone" : "+6282231018184"}</h3>
+                            <FaPhoneAlt className="text-white size-4 5xl:size-7"/>
+                            <h3 className="text-white font-normal text-sm 4xl:text-lg 5xl:text-2xl">{mobile ? "Call" : "+6282231018184"}</h3>
                     </a>
 
                     <a 
