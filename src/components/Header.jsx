@@ -23,7 +23,20 @@ const Header = () => {
     const closeabout = () => {setOpenAbout(false)};
 
     const [openproductmenu, setOpenProductMenu] = useState(false);
-    const openProductMenu = () => {setOpenProductMenu(true)};
+    const openProduct = () => {setOpenProductMenu(true)};
+    const closeProduct = () => {setOpenProductMenu(false)};
+
+    const [openservicemenu, setOpenServiceMenu] = useState(false);
+    const openService = () => {setOpenServiceMenu(true)};
+    const closeService = () => {setOpenServiceMenu(false)};
+
+    const [opencontactmenu, setOpenContactMenu] = useState(false);
+    const openContact = () => {setOpenContactMenu(true)};
+    const closeContact = () => {setOpenContactMenu(false)};
+
+    const [opendynamo, setOpenDynamo] = useState(false);
+    const openDynamo = () => {setOpenDynamo(true)};
+    const closeDynamo = () => {setOpenDynamo(false)};
 
     return(
         <div className="w-full py-4 3xl:py-8 5xl:py-12">
@@ -33,18 +46,18 @@ const Header = () => {
                 </div>
 
                 <div className='hidden xl:flex flex-row justify-between items-center w-auto'>
-                    <ul className='flex flex-row justify-between items-center gap-8 3xl:gap-16 text-black font-normal text-lg'>
-                        <li onClick={goToHome} className='font-bold text-lg 3xl:text-sm 5xl:text-3xl uppercase'>
+                    <ul className='flex flex-row justify-between items-center gap-8 3xl:gap-14 text-black font-normal text-lg'>
+                        <li onClick={goToHome} className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>
                             Home
                         </li>
 
-                        <div className='bg-red-500 relative flex flex-col justify-between items-center gap-2 5xl:gap-6' onMouseEnter={openabout} onMouseLeave={closeabout}>
-                            <div className='flex flex-row justify-between items-center hover:text-primary'>
-                                <li className='font-bold text-lg 3xl:text-sm 5xl:text-3xl uppercase '>About</li>
-                                <MdOutlineArrowDropDown className='text-black hover:text-primary size-6'/>
+                        <div className='relative flex flex-col justify-between items-center group hover:text-primary 5xl:gap-6' onMouseEnter={openabout} >
+                            <div className='flex flex-row justify-between items-center'>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>About</li>
+                                <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                                 
-                            <div className='flex justify-center items-center mt-[10rem] absolute w-full z-20'>
+                            <div className='flex justify-center items-center mt-[10rem] absolute w-full z-20' onMouseLeave={closeabout}>
                                 {openaboutmenu && (
                                     <div className='absolute bg-primary shadow-lg py-2'>
                                         <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
@@ -60,43 +73,60 @@ const Header = () => {
                         </div>
                         
 
-                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseHover={openProductMenu}>
+                        <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary' onMouseEnter={openProduct}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-sm 5xl:text-3xl uppercase'>Products</li>
-                                <MdOutlineArrowDropDown className='text-black size-6'/>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>Products</li>
+                                <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[11rem] absolute w-full'>
+                            <div className='flex justify-center items-center mt-[10rem] absolute w-full z-20' onMouseLeave={closeProduct}>
                                 {openproductmenu && (
-                                    <div className='absolute bg-white shadow-lg py-2'>
-                                        <ul className='flex flex-col gap-2 w-[15rem]'>
-                                            <li className='p-2 cursor-pointer w-full'>Dynamo</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Open Diesel Generator</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Silent Box Diesel Generator</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Mobile Trailer</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer w-full'>Control System</li>
+                                    <div className='absolute flex flex-row gap-2 shadow-lg py-2'>
+                                        <ul className='flex flex-col w-[15rem] bg-primary text-white font-bold text-lg'>
+                                            <div className='flex flex-row justify-between items-center'>
+                                                <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onMouseEnter={openDynamo} onMouseLeave={closeDynamo}>Dynamo</li>
+
+                                                
+                                            </div>
+                                            
+                                                
+
+
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Open Diesel Generator</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Silent Box Diesel Generator</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Mobile Trailer</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Control System</li>
                                         </ul>
+
+                                        <div className='ml-4 bg-primary'>
+                                            {opendynamo && (
+                                                <div className='text-white'>ddddd</div>
+                                            )}
+                                        </div>
+
+                                        
                                     </div>
+                                    
+
+                                    
                                 )}
+
+                                
                             </div>
                         </div>
 
                         {/* Dropdown menu for products */}                              
                         
-                        <li className='font-bold text-xl 3xl:text-sm 5xl:text-3xl uppercase'>Application</li>
+                        <li className='font-bold text-xl 3xl:text-md 5xl:text-3xl uppercase'>Application</li>
 
-                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseHover={openProductMenu}>
+                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseHover={openService}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-sm 5xl:text-3xl uppercase'>Service</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>Service</li>
                                 <MdOutlineArrowDropDown className='text-black size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[11rem] absolute w-full'>
-                                {openproductmenu && (
+                            <div className='flex justify-center items-center mt-[11rem] absolute w-full z-20' onMouseLeave={closeService}>
+                                {openservicemenu && (
                                     <div className='absolute bg-white shadow-lg py-2'>
                                         <ul className='flex flex-col gap-2 w-[15rem]'>
                                             <li className='p-2 cursor-pointer w-full'>Dynamo</li>
@@ -114,14 +144,14 @@ const Header = () => {
                             </div>
                         </div>
 
-                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseHover={openProductMenu}>
+                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseHover={openContact}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-sm 5xl:text-3xl uppercase'>Contact</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>Contact</li>
                                 <MdOutlineArrowDropDown className='text-black size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[11rem] absolute w-full'>
-                                {openproductmenu && (
+                            <div className='flex justify-center items-center mt-[11rem] absolute w-full z-10' onMouseLeave={closeContact}>
+                                {opencontactmenu && (
                                     <div className='absolute bg-white shadow-lg py-2'>
                                         <ul className='flex flex-col gap-2 w-[15rem]'>
                                             <li className='p-2 cursor-pointer w-full'>Dynamo</li>
