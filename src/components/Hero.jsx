@@ -29,7 +29,7 @@ const Hero = () => {
                     <div className='relative w-full h-[15rem] sm:h-[30rem] xl:h-screen flex flex-col items-center justify-between'>
                         <img src={Banner1} alt="Banner1-image" className='w-full h-full xl:h-screen object-cover'/>
                         
-                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-85">
+                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-65">
                             <Swiper 
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
@@ -53,7 +53,7 @@ const Hero = () => {
                     <div className='relative w-full h-[15rem] sm:h-[30rem] xl:h-screen flex flex-col items-center justify-between'>
                         <img src={Banner2} alt="Banner2-image" className='w-full h-full xl:h-screen object-cover'/>
                         
-                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-85">
+                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-65">
                             <Swiper 
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
@@ -77,7 +77,7 @@ const Hero = () => {
                     <div className='relative w-full h-[15rem] sm:h-[30rem] xl:h-screen flex flex-col items-center justify-between'>
                         <img src={Banner3} alt="Banner3-image" className='w-full h-full xl:h-screen object-cover'/>
                         
-                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-85">
+                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-65">
                             <Swiper 
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
@@ -101,7 +101,7 @@ const Hero = () => {
                     <div className='relative w-full h-[15rem] sm:h-[30rem] xl:h-screen flex flex-col items-center justify-between'>
                         <img src={Banner4} alt="Banner4-image" className='w-full h-full xl:h-screen object-cover'/>
                         
-                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-85">
+                        <div className="flex absolute z-20 w-full h-full items-end justify-center xl:px-25 3xl:px-65 4xl:px-65">
                             <Swiper 
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}

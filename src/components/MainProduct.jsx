@@ -28,24 +28,29 @@ const MainProduct = () => {
                 className='w-full h-auto' 
                 style={{ backgroundImage: `url(${BuildingBackground})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 
-                <div className='bg-white/95 w-full py-8 xl:py-28 px-6 xl:px-25 3xl:px-65 4xl:px-85'>
+                <div className='bg-white/95 w-full pt-14 -pb-4 xl:pt-20 xl:pb-6 '>
                     <h1 className='font-bold text-4xl xl:text-5xl text-center uppercase text-primary mb-6 xl:mb-14'>Main Products</h1>
                     
                     {products.length && (
-                        <div>
+                        <div className='relative px-6 xl:px-25 3xl:px-85 4xl:px-85'>
+                            <div className="hidden xl:flex absolute swiper-button-prev text-primary size-8 left-0 top-1/2 -translate-y-1/2 z-30 ml-6 3xl:ml-50" />
+                            
                             <Swiper
                                 modules={[Navigation, Pagination]}
-                                navigation={false}
-                                pagination={true}
+                                navigation={{
+                                    nextEl: '.swiper-button-next',
+                                    prevEl: '.swiper-button-prev',
+                                }}
+                                pagination={{ clickable: true, el: '.swiper-pagination' }}
                                 spaceBetween={10}
                                 slidesPerView={2}
                                 breakpoints={{
-                                    1280: { slidesPerView: 4},
+                                    1280: { slidesPerView: 4, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' } }
                                 }}
-                                className='myswiper flex flex-row justify-between items-center gap-6'>
+                                className=''>
                                     
                                     {products[0].categoryProducts.map(product => (
-                                        <SwiperSlide key={product.id}>
+                                        <SwiperSlide key={product.id} className=''>
                                             <div className='bg-secondary mb-17 flex flex-col justify-between items-center gap-6 group hover:border-1 hover:border-primary hover:bg-primary transition-colors duration-500 ease-in-out'>
                                                 <img src={product.image} alt="product-image" className='w-full h-full object-cover'/>
                                                 <div className='flex flex-col justify-center items-center gap-2 mb-6'>
@@ -57,7 +62,7 @@ const MainProduct = () => {
                                     ))}
 
                                     {products[1].categoryProducts.map(product => (
-                                        <SwiperSlide key={product.id}>
+                                        <SwiperSlide key={product.id} className=''>
                                             <div className='bg-secondary flex flex-col justify-between items-center gap-6 group hover:border-1 hover:border-primary hover:bg-primary transition-colors duration-500 ease-in-out'>
                                                 <img src={product.image[0]} alt="product-image" className='w-full h-full object-cover'/>
                                                 <div className='flex flex-col justify-center items-center gap-2 mb-6'>
@@ -66,15 +71,14 @@ const MainProduct = () => {
                                                 </div>
                                             </div>
                                         </SwiperSlide>
-                                    ))}    
-
-                                    {/* <button className='swiper-button-next text-primary size-8'></button>                                                                                                   */}
+                                    ))}
                             </Swiper>
+
+                            <div className="hidden xl:flex absolute swiper-button-next text-primary size-8 right-0 top-1/2 -translate-y-1/2 z-30 mr-6 3xl:mr-50" />
+
+                            <div className="xl:hidden swiper-pagination absolute bottom-0 left-1/2 -translate-x-1/2 z-30 self-center pb-6" />
                         </div>
                     )}
-
-
-                    
                 </div>
             </div>
         </div>

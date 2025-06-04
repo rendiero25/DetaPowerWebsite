@@ -7,7 +7,7 @@ import Pinterest from '../assets/pinterest.png';
 
 const Footer = () => {
     return(
-        <div className="bg-accent w-full h-auto px-6 xl:px-25 3xl:px-65 4xl:px-85">
+        <div className="bg-accent w-full h-auto px-6 xl:px-25 3xl:px-85 4xl:px-85">
             <div className="flex flex-col justify-between items-center gap-8 xl:gap-2">
                 <div className="w-full flex flex-col xl:flex-row pt-8 pb-4 xl:pt-16 xl:pb-6 justify-between items-start gap-6 xl:gap-16">
                     <div className="flex flex-col justify-center items-start gap-4 xl:gap-8">
@@ -47,7 +47,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="bg-primary px-6 py-12 h-full w-full xl:w-[25rem]">
+                    <div className="bg-primary px-10 py-12 h-full w-full xl:w-[27rem]">
                         <h2 className="text-white font-bold text-xl">Message</h2>
                         <form
                             action="mailto:detapowergensetindonesia@gmail.com"
@@ -82,7 +82,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-row justify-center items-center self-start gap-2'>
+                <div className='flex flex-row self-start xl:self-center justify-center xl:items-center gap-2'>
                     <img src={Facebook} alt="facebook-icon" className='size-8' />
                     <img src={Linkedin} alt="linkedin-icon" className='size-8' />
                     <img src={Twitter} alt="twitter-icon" className='size-8' />
@@ -90,7 +90,7 @@ const Footer = () => {
                     <img src={Pinterest} alt="pinterest-icon" className='size-8' />
                 </div>
 
-                <h3 className=' mt- xl:mt-14 mb-4 text-xl xl:text-sm'>Copyright &copy; Fujian Deta Electric Co., Ltd. Developed by <span className='font-bold text-md'><a href="http://www.rendiero.dev">Rendiero</a></span></h3>
+                <h3 className='text-gray-400 mb-4 xl:mb-12 text-xl xl:mt-14  xl:text-sm xl:self-start'>Copyright &copy; Fujian Deta Electric Co., Ltd. Developed by <span className='font-bold text-md'><a href="http://www.rendiero.dev">Rendiero</a></span></h3>
             </div>
         </div>
     )

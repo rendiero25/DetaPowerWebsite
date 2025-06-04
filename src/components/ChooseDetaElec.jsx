@@ -8,7 +8,7 @@ const ChooseDetaElec = () => {
                 <div 
                     className='w-full xl:w-1/2 h-full' 
                     style={{ backgroundImage: `url(${TowerImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                        <img src={DetaPowerTranparent} alt="detapowertransparent-image" className='bg-black/80 h-full w-full'/>
+                        <img src={DetaPowerTranparent} alt="detapowertransparent-image" className='bg-black/90 h-full w-full'/>
                 </div>
             
             
