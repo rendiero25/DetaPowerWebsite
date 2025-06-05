@@ -16,6 +16,7 @@ import BannerControlsystem from '../assets/bannercontrolsystem.jpg';
 
 const Hero = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+
     return(
         <div className=''>
             <Swiper 
@@ -34,7 +35,7 @@ const Hero = () => {
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
                                 direction='vertical'
-                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[14rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
+                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[11rem] 3xl:h-[13.8rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
                                     <SwiperSlide>
                                         <div className={`swipertoup flex flex-row justify-between items-center transition-all opacity-100 duration-700 ${activeIndex === 0 ? 'animate-slideup' : ''}`}>
                                             <img src={BannerDynamo} alt="BannerDynamo-image" className='w-20 sm:w-33 xl:w-[13.7rem] 2xl:w-[14.2rem] 3xl:w-[20rem] 4xl:w-[30rem] 5xl:w-[45rem] h-full cursor-pointer border-2 border-primary'/>
@@ -58,7 +59,7 @@ const Hero = () => {
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
                                 direction='vertical'
-                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[14rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
+                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[11rem] 3xl:h-[13.8rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
                                     <SwiperSlide>
                                         <div className={`swipertoup flex flex-row justify-between items-center transition-all opacity-100 duration-700 ${activeIndex === 1 ? 'animate-slideup' : ''}`}>
                                             <img src={BannerDynamo} alt="BannerDynamo-image" className='w-20 sm:w-33 xl:w-[13.7rem] 2xl:w-[14.2rem] 3xl:w-[20rem] 4xl:w-[30rem] 5xl:w-[45rem] h-full cursor-pointer border-2 border-primary'/>
@@ -82,7 +83,7 @@ const Hero = () => {
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
                                 direction='vertical'
-                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[14rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
+                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[11rem] 3xl:h-[13.8rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
                                     <SwiperSlide>
                                         <div className={`swipertoup flex flex-row justify-between items-center transition-all opacity-100 duration-700 ${activeIndex === 2 ? 'animate-slideup' : ''}`}>
                                             <img src={BannerDynamo} alt="BannerDynamo-image" className='w-20 sm:w-33 xl:w-[13.7rem] 2xl:w-[14.2rem] 3xl:w-[20rem] 4xl:w-[30rem] 5xl:w-[45rem] h-full cursor-pointer border-2 border-primary'/>
@@ -106,7 +107,7 @@ const Hero = () => {
                                 modules={[Autoplay]}
                                 autoplay={{ delay: 6000 }}
                                 direction='vertical'
-                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[14rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
+                                className='flex flex-row w-full h-15 sm:h-26 xl:h-[11rem] 3xl:h-[13.8rem] 4xl:h-[20rem] 5xl:h-[35rem] '>
                                     <SwiperSlide>
                                         <div className={`swipertoup flex flex-row justify-between items-center transition-all opacity-100 duration-700 ${activeIndex === 3 ? 'animate-slideup' : ''}`}>
                                             <img src={BannerDynamo} alt="BannerDynamo-image" className='w-20 sm:w-33 xl:w-[13.7rem] 2xl:w-[14.2rem] 3xl:w-[20rem] 4xl:w-[30rem] 5xl:w-[45rem] h-full cursor-pointer border-2 border-primary'/>
