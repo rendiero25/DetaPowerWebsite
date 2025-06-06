@@ -7,9 +7,9 @@ import Pinterest from '../assets/pinterest.png';
 
 const Footer = () => {
     return(
-        <div className="bg-accent w-full h-auto px-6 xl:px-25 3xl:px-85 4xl:px-85">
+        <div className="bg-accent w-full h-auto px-6 xl:px-25 3xl:px-85 4xl:px-158">
             <div className="flex flex-col justify-between items-center gap-8 xl:gap-2">
-                <div className="w-full flex flex-col xl:flex-row pt-8 pb-4 xl:pt-16 xl:pb-6 justify-between items-start gap-6 xl:gap-16">
+                <div className="w-full flex flex-col xl:flex-row pt-8 pb-4 xl:pt-16 xl:pb-6 justify-between items-start gap-6 xl:gap-6">
                     <div className="flex flex-col justify-center items-start gap-4 xl:gap-8">
                         <h2 className="font-bold text-xl text-black">Quick Links</h2>
                         <ul className="flex flex-wrap xl:flex-col xl:justify-center items-start gap-6 xl:gap-2">
@@ -35,7 +35,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col justify-center items-start gap-8 max-w-sm">
+                    <div className="flex flex-col justify-center items-start gap-8 max-w-xs">
                         <h2 className="font-bold text-xl text-black">Contact Us</h2>
                         <ul className="flex flex-col justify-center items-start gap-4">
                             <li className="text-md font-normal text-gray-400">Phone: +62822 3101 8184</li>

@@ -11,7 +11,7 @@ const TopMenu = () => {
     const [mobile] = useState(window.innerWidth <= 640);
 
     return(
-        <div className="bg-primary w-full px-6 xl:px-25 3xl:px-85 4xl:px-85 4xl:py-2 5xl:py-4">
+        <div className="bg-primary w-full px-6 xl:px-25 3xl:px-85 4xl:px-158 4xl:py-2 5xl:py-4">
             <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row justify-between items-center gap-4 5xl:gap-8">
                     <a 

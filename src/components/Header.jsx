@@ -13,7 +13,6 @@ import { MdClose } from "react-icons/md";
 const Header = () => {
 
     let navigate = useNavigate();
-    let goToHome = () => {navigate("/")};
 
     const [openmobilemenu, setOpenMobileMenu] = useState(false);
     const openMobileMenu = () => {setOpenMobileMenu(true)};
@@ -57,20 +56,20 @@ const Header = () => {
 
     return(
         <div className="w-full">
-            <div className='px-6 xl:px-25 3xl:px-85 4xl:px-85 flex flex-row justify-between items-center w-full h-full'>
+            <div className='px-6 xl:px-25 3xl:px-85 4xl:px-158 flex flex-row justify-between items-center w-full h-full'>
                 <div className=''>
-                    <img src={Logo} alt="detapower-logo" className='w-55 3xl:w-65 5xl:w-90' />
+                    <img src={Logo} alt="detapower-logo" className='w-55 3xl:w-65 5xl:w-90' onClick={() => navigate("/")}/>
                 </div>
 
                 <div className='hidden xl:flex flex-row justify-between items-center w-auto h-full'>
-                    <ul className='flex flex-row justify-between items-center gap-8 3xl:gap-14 text-black font-normal text-lg'>
-                        <li onClick={goToHome} className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>
+                    <ul className='flex flex-row justify-between items-center gap-8 3xl:gap-10 text-black font-normal text-lg'>
+                        <li onClick={() => navigate("/")} className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>
                             Home
                         </li>
 
                         <div className='relative flex flex-col justify-between items-center group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openabout} onMouseLeave={closeabout}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>About</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>About</li>
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                                 
@@ -78,11 +77,11 @@ const Header = () => {
                                 {openaboutmenu && (
                                     <div className='absolute bg-primary shadow-lg py-2'>
                                         <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary ease-in-out'>Profil</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Philosophy</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Culture</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Development</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Company Video</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/profile")}>Profil</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/profile#philosophy")}>Philosophy</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/profile#culture")}>Culture</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/profile#development")}>Development</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/profile#companyvideo")}>Company Video</li>
                                         </ul>
                                     </div>
                                 )}
@@ -92,11 +91,11 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary' onMouseEnter={openProduct} onMouseLeave={closeProduct}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase group-hover:text-primary py-4 3xl:py-8 5xl:py-12'>Products</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase group-hover:text-primary py-4 3xl:py-8 5xl:py-12 cursor-pointer'>Products</li>
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[11rem] absolute w-full z-20'>
+                            <div className='flex justify-center items-center xl:mt-[11.5rem] 3xl:mt-[13.5rem] absolute w-full z-20'>
                                 {openproductmenu && (
                                     <div className='absolute flex flex-row shadow-lg py-2'>
                                         <ul className='flex flex-col w-[17rem] bg-primary text-white font-bold text-lg'>   
@@ -104,10 +103,10 @@ const Header = () => {
                                             <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openDynamo} onMouseLeave={closeDynamo}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
                                                     <h3 className='font-medium text-lg'>Dynamo</h3>
-                                                    <FaAngleRight className='text-white inline-block ml-2 text-white size-4 group-hover:text-primary' />
+                                                    <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
                                                 </div>
 
-                                                <div className='bg-primary absolute z-20 ml-[15.5rem]'>
+                                                <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
                                                     {opendynamo && (
                                                         <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
                                                             <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG164</li>
@@ -123,148 +122,120 @@ const Header = () => {
 
                                             
 
-                                            <li className='py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openDiesel}>
+                                            <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openDiesel} onMouseLeave={closeDiesel}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3>Open Diesel Generator</h3>
-                                                    <FaAngleRight className='text-white inline-block ml-2 text-white size-4 group-hover:text-primary' />
+                                                    <h3 className='font-medium text-lg'>Open Diesel Generator</h3>
+                                                    <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
+                                                </div>
+
+                                                <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
+                                                    {opendiesel && (
+                                                        <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Cummins</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Yuchai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Weichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Xichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Shangchai</li>
+                                                        </ul>
+                                                    )}
                                                 </div>
                                             </li>
 
-                                            <li className='py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openSilent}>
+                                            <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openSilent} onMouseLeave={closeSilent}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3>Silent Box Diesel Generator</h3>
-                                                    <FaAngleRight className='text-white inline-block ml-2 text-white size-4 group-hover:text-primary' />
+                                                    <h3 className='font-medium text-lg'>Silent Box Diesel Generator</h3>
+                                                    <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
+                                                </div>
+
+                                                <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
+                                                    {opensilent && (
+                                                        <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Cummins</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Yuchai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Weichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Xichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Shangchai</li>
+                                                        </ul>
+                                                    )}
                                                 </div>
                                             </li>
 
-                                            <li className='py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openMobile}>
+                                            <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openMobile} onMouseLeave={closeMobile}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3>Mobile Trailer</h3>
-                                                    <FaAngleRight className='text-white inline-block ml-2 text-white size-4 group-hover:text-primary' />
+                                                    <h3 className='font-medium text-lg'>Mobile Trailer</h3>
+                                                    <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
+                                                </div>
+
+                                                <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
+                                                    {openmobile && (
+                                                        <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Trailer</li>
+                                                        </ul>
+                                                    )}
                                                 </div>
                                             </li>
 
-                                            <li className='py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openControl} >
+                                            <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openControl} onMouseLeave={closeControl}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3>Control System</h3>
-                                                    <FaAngleRight className='text-white inline-block ml-2 text-white size-4 group-hover:text-primary' />
+                                                    <h3 className='font-medium text-lg'>Control System</h3>
+                                                    <FaAngleRight className='text-white inline-block ml-2  size-4 group-hover:text-primary' />
+                                                </div>
+
+                                                <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
+                                                    {opencontrol && (
+                                                        <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Automatic Switch</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Controller</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Parallel System</li>
+                                                        </ul>
+                                                    )}
                                                 </div>
                                             </li>
                                         </ul>
-                                        
-                                        
-                                        {/* <div className='ml-2 bg-primary' onMouseLeave={closeDynamo}>
-                                            {opendynamo && (
-                                                <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG164</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG184</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG224</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG274</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG314</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG354</li>
-                                                </ul>
-                                            )}
-                                        </div>
-
-                                        <div className='ml-2 bg-primary' onMouseLeave={closeDiesel}>
-                                            {opendiesel && (
-                                                <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Cummins</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Yuchai</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Weichai</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Xuchai</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Shangchai</li>
-                                                </ul>
-                                            )}
-                                        </div>
-
-                                        <div className='ml-2 bg-primary' onMouseLeave={closeSilent}>
-                                            {opensilent && (
-                                                <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Cummins</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Yuchai</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Weichai</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Xuchai</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Shangchai</li>
-                                                </ul>
-                                            )}
-                                        </div>
-
-                                        <div className='ml-2 bg-primary'onMouseLeave={closeMobile}>
-                                            {openmobile && (
-                                                <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Container</li>
-                                                </ul>
-                                            )}
-                                        </div>
-
-                                        <div className='ml-2 bg-primary' onMouseLeave={closeControl}>
-                                            {opencontrol && (
-                                                <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Automatic Switch</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Controller</li>
-                                                    <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Parallel System</li>
-                                                </ul>
-                                            )}
-                                        </div> */}
                                     </div>
-                                    
-
-                                    
                                 )}
-
                                 
                             </div>
                         </div>
 
                         {/* Dropdown menu for products */}                              
                         
-                        <li className='font-bold text-xl 3xl:text-md 5xl:text-3xl uppercase'>Application</li>
+                        <li className='font-bold text-xl 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>Application</li>
 
-                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseEnter={openService}>
+                        <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openService} onMouseLeave={closeService}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>Service</li>
-                                <MdOutlineArrowDropDown className='text-black size-6'/>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>Service</li>
+                                <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[11rem] absolute w-full z-20' onMouseLeave={closeService}>
+                            <div className='flex justify-center items-center mt-[10rem] xl:mt-[11.5rem] 3xl:mt-[11.1rem] absolute w-full z-20'>
                                 {openservicemenu && (
-                                    <div className='absolute bg-white shadow-lg py-2'>
-                                        <ul className='flex flex-col gap-2 w-[15rem]'>
-                                            <li className='p-2 cursor-pointer w-full'>Dynamo</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Open Diesel Generator</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Silent Box Diesel Generator</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Mobile Trailer</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer w-full'>Control System</li>
+                                    <div className='absolute bg-primary shadow-lg py-2'>
+                                        <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary ease-in-out'>Technical Support</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Service</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>After-Sales System</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Manual</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Operation Video</li>
                                         </ul>
                                     </div>
                                 )}
                             </div>
                         </div>
 
-                        <div className='relative flex flex-col justify-between items-center gap-2' onMouseEnter={openContact}>
+                        <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openContact} onMouseLeave={closeContact}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase'>Contact</li>
-                                <MdOutlineArrowDropDown className='text-black size-6'/>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>Contact</li>
+                                <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[11rem] absolute w-full z-10' onMouseLeave={closeContact}>
+                            <div className='flex justify-center items-center mt-[10rem] xl:mt-[11.5rem] 3xl:mt-[8.4rem] absolute w-full z-20'>
                                 {opencontactmenu && (
-                                    <div className='absolute bg-white shadow-lg py-2'>
-                                        <ul className='flex flex-col gap-2 w-[15rem]'>
-                                            <li className='p-2 cursor-pointer w-full'>Dynamo</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Open Diesel Generator</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Silent Box Diesel Generator</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer'>Mobile Trailer</li>
-                                            <div className="border-b-1 border-gray-300 w-full"></div>
-                                            <li className='p-2 cursor-pointer w-full'>Control System</li>
+                                    <div className='absolute bg-primary shadow-lg py-2'>
+                                        <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary ease-in-out'>Contact Way</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Message</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Recruitment</li>
                                         </ul>
                                     </div>
                                 )}
@@ -273,7 +244,7 @@ const Header = () => {
                     </ul>
                 </div>
 
-                <div className='xl:hidden'>
+                <div className='xl:hidden py-4'>
                     {openmobilemenu ? <MdClose onClick={closeMobileMenu} className='text-primary size-10' /> : <CgMenuGridR onClick={openMobileMenu} className='text-primary size-10'/>}
                 </div>
             </div>

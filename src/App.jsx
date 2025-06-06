@@ -5,6 +5,7 @@ import TopMenu from './components/TopMenu.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Index from './pages/Index.jsx';
+import Profile from './pages/Profile.jsx';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
 
         <Routes>
           <Route path='/' element={<Index/>} />
+          <Route path='/profile' element={<Profile/>} />
         </Routes>
 
         <Footer />
