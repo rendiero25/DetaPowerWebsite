@@ -200,7 +200,7 @@ const Header = () => {
 
                         {/* Dropdown menu for products */}                              
                         
-                        <li className='font-bold text-xl 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>Application</li>
+                        <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer' onClick={() => navigate("/application")}>Application</li>
 
                         <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openService} onMouseLeave={closeService}>
                             <div className='flex flex-row justify-between items-center'>

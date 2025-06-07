@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import { IoHomeSharp } from "react-icons/io5";
 import { IoTimeOutline } from "react-icons/io5";
 
 import ProfileBanner from "../assets/profilebanner.jpg";
@@ -14,6 +13,8 @@ import Number3 from "../assets/3.png";
 
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
+
+import Breadcrumbs from "../components/Breadcrumbs";
 
 const Profile = () => {
 
@@ -33,13 +34,8 @@ const Profile = () => {
             <div className="h-[9rem] 3xl:h-[20rem] 4xl:h-[30rem]">
                 <img src={ProfileBanner} alt="profilebanner-image" className="w-full h-full object-cover"/>
             </div>
-            
-            <div className="bg-gray-200 h-11 flex flex-row justify-start items-center gap-1 px-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158">
-                <IoHomeSharp className="size-3"/>
-                <a href="/" className="font-normal text-sm">Homepage</a>
-                <h5>&gt;</h5>
-                <a href="/profile" className="font-normal text-sm">Profile</a>
-            </div>
+
+            <Breadcrumbs linktopage={"/profile"} pagename={"Profile"}/>
 
             <div className="flex flex-col gap-12 mt-12">
                 <div className="p-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158 flex flex-col justify-between items-center gap-12">

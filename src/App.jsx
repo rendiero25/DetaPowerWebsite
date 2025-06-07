@@ -6,6 +6,7 @@ import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Index from './pages/Index.jsx';
 import Profile from './pages/Profile.jsx';
+import Application from "./pages/Application.jsx";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Index/>} />
           <Route path='/profile' element={<Profile/>} />
+          <Route path='/application' element={<Application />} />
         </Routes>
 
         <Footer />
