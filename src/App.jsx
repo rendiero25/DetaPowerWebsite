@@ -7,6 +7,8 @@ import Footer from './components/Footer.jsx';
 import Index from './pages/Index.jsx';
 import Profile from './pages/Profile.jsx';
 import Application from "./pages/Application.jsx";
+import Service from "./pages/Service.jsx";
+import Contact from "./pages/Contact.jsx";
 
 const App = () => {
   return (
@@ -20,6 +22,8 @@ const App = () => {
           <Route path='/' element={<Index/>} />
           <Route path='/profile' element={<Profile/>} />
           <Route path='/application' element={<Application />} />
+          <Route path='/service' element={<Service />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
 
         <Footer />

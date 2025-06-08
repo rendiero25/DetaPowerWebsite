@@ -204,7 +204,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openService} onMouseLeave={closeService}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>Service</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer' onClick={() => navigate("/service#technicalsupport")}>Service</li>
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
@@ -212,11 +212,11 @@ const Header = () => {
                                 {openservicemenu && (
                                     <div className='absolute bg-primary shadow-lg py-2'>
                                         <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary ease-in-out'>Technical Support</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Service</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>After-Sales System</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Manual</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Operation Video</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/service#technicalsupport")}>Technical Support</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/service#service")}>Service</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/service#aftersalessystem")}>After-Sales System</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/service#manual")}>Manual</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/service#operationvideo")}>Operation Video</li>
                                         </ul>
                                     </div>
                                 )}
@@ -225,7 +225,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openContact} onMouseLeave={closeContact}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>Contact</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer' onClick={() => navigate("/contact#contactway")}>Contact</li>
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
@@ -233,9 +233,9 @@ const Header = () => {
                                 {opencontactmenu && (
                                     <div className='absolute bg-primary shadow-lg py-2'>
                                         <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary ease-in-out'>Contact Way</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Message</li>
-                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Recruitment</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/contact#contactway")}>Contact Way</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/contact#message")}>Message</li>
+                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate("/contact#recruitment")}>Recruitment</li>
                                         </ul>
                                     </div>
                                 )}

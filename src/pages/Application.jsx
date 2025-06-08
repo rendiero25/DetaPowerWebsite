@@ -15,7 +15,7 @@ import ApplicationImage8 from "../assets/appimage8.jpg";
 const Application = () => {
     return(
         <div className="flex flex-col xl:pb-16">
-            <div className="h-[9rem] 3xl:h-[20rem] 4xl:h-[30rem]">
+            <div className="h-[9rem] 3xl:h-[22rem] 4xl:h-[30rem]">
                 <img src={ProfileBanner} alt="profilebanner-image" className="w-full h-full object-cover"/>
             </div>
 
