@@ -5,12 +5,13 @@ import { useLocation } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
 
 import ProfileBanner from "../assets/profilebanner.jpg";
-import CommingSoonImage from "../assets/comingsoon.png";
 import Location from "../assets/contactlocation.jpg";
 import Phone from "../assets/contactphone.jpg";
 import Email from "../assets/contactemail.jpg";
 import WeChat from "../assets/contactwechat.jpg";
-import { div } from "framer-motion/client";
+
+import { IoAddCircleOutline } from "react-icons/io5";
+import { FiSend } from "react-icons/fi";
 
 const Contact = () => {
 
@@ -43,6 +44,7 @@ const Contact = () => {
     let [opencontactway, setContactWay] = useState(false);
     let [openmessage, setMessage] = useState(false);
     let [openrecruitment, setRecruitment] = useState(false);
+    let [openrecruitmenttab, setOpenRecruitmentTab] = useState(false);
 
     const isActiveContactWay = () => {
         setContactWay(true);
@@ -61,6 +63,10 @@ const Contact = () => {
         setMessage(false);
         setRecruitment(true);
     };
+
+    const isActiveOpenRecruitment = () => {
+        setOpenRecruitmentTab(!openrecruitmenttab);
+    }
 
     return(
         <div className="flex flex-col xl:pb-16">
@@ -139,7 +145,7 @@ const Contact = () => {
                 )}
             </div>
 
-            <div>
+            <div id="message">
                 {openmessage && (
                     <div className="flex flex-col justify-between items-center gap-4 pb-14 px-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158">
                         <form
@@ -154,7 +160,7 @@ const Contact = () => {
                             <textarea
                                 name="message"
                                 placeholder="Please enter the message content"
-                                className="border-1 border-gray-300 w-full p-3 rounded text-black mb-6 font-bold"
+                                className="border-1 border-gray-300 w-full p-3 rounded text-black mb-6 font-bold 3xl:font-normal"
                                 rows={5}
                                 required
                             />
@@ -164,7 +170,7 @@ const Contact = () => {
                                 type="text"
                                 name="phone"
                                 placeholder="Please enter your phone number"
-                                className="border-1 border-gray-300 w-full p-3 rounded text-black mb-6 font-bold"
+                                className="border-1 border-gray-300 w-full p-3 rounded text-black mb-6 font-bold 3xl:font-normal"
                                 required
                             />
 
@@ -175,7 +181,7 @@ const Contact = () => {
                                         type="email"
                                         name="email"
                                         placeholder="Please input your email"
-                                        className="border-1 border-gray-300 w-full p-3 rounded text-black font-bold"
+                                        className="border-1 border-gray-300 w-full p-3 rounded text-black font-bold 3xl:font-normal"
                                         required
                                     />
                                 </div>
@@ -186,7 +192,7 @@ const Contact = () => {
                                         type="text"
                                         name="address"
                                         placeholder="Please enter address"
-                                        className="border-1 border-gray-300 w-full p-3 rounded text-black font-bold"
+                                        className="border-1 border-gray-300 w-full p-3 rounded text-black font-bold 3xl:font-normal"
                                         required
                                     />
                                 </div>
@@ -198,7 +204,7 @@ const Contact = () => {
                                     type="text"
                                     name="verification"
                                     placeholder="Verification Code"
-                                    className="border-1 border-gray-300 bg-white p-3 rounded text-black w-50 font-bold"
+                                    className="border-1 border-gray-300 bg-white p-3 rounded text-black w-50 font-bold 3xl:font-normal"
                                     required
                                 />
 
@@ -215,11 +221,46 @@ const Contact = () => {
                 )}
             </div>
 
-            <div>
+            <div id="recruitment" className="py-20 px-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158">
                 {openrecruitment && (
-                    <div></div>
+                    <div className="cursor-pointer" onClick={isActiveOpenRecruitment}>
+                        <div className="flex flex-row justify-between items-center h-28">
+                            <div className={`${isActiveOpenRecruitment ? "bg-primary" : "bg-gray-100"} gap-4 px-8 py-6 w-full h-full flex flex-col justify-center items-start`}>
+                                <h4 className={`font-medium text-2xl ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`}>Seller</h4>
+                                <div className="flex flex-col xl:flex-row gap-1 xl:gap-10 justify-start items-center">
+                                    <h5 className={`font-normal text-sm ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`}>Department: Sales Department</h5>
+                                    <h5 className={`font-normal text-sm ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`}>Release time: 2025-06-090</h5>
+                                </div>
+                            </div>
+
+                            <div className={`${isActiveOpenRecruitment ? "bg-primary" : "bg-gray-100"} px-10 flex justify-center items-center h-full`}>
+                                <IoAddCircleOutline className={`size-10 ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`} />
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {openrecruitmenttab && (
+                    <div className="bg-gray-200 cursor-pointer flex flex-col justify-center items-start gap-8 py-8 focus:bg-primary">
+                        <p className="font-normal text-black text-sm leading-7 px-8 py-4">
+                            1. Responsible for product market channel development and sales, and implement and complete the company's annual product sales plan. <br/>
+                            2. According to the company's marketing strategy, increase sales value, control costs, expand product sales in the area in charge, actively complete sales volume indicators, and expand product market share;<br/>
+                            3. Maintain good communication with customers and grasp customer needs in real time. Provide customers with active, enthusiastic, satisfactory and thoughtful service <br/>
+                            4. According to the company's products, prices and market strategies, independently handle inquiries, quotations, negotiation of contract terms and contract signing. In the process of executing the contract, coordinate and supervise the operation of various functional departments of the company. <br/>
+                            5. Dynamically grasp market prices, and regularly provide the company with market analysis and forecast reports and personal work weekly reports. <br/>
+                            6. Maintain and develop new sales channels and new customers, independently develop and expand upstream and downstream users, especially end users. <br/>
+                            7. Collect first-line marketing information and user opinions, and provide reference opinions on the company's marketing strategy, after-sales service, etc.
+                        </p>
+
+                        <button className="bg-primary py-2 px-6 ml-8  flex flex-row justify-center items-center gap-4">
+                            <FiSend className="size-6 text-white"/>
+                            <h4 className="flex flex-row justify-center items-center gap-4 font-normal text-lg text-white">Submit your resume</h4>
+                        </button>
+                    </div>
                 )}
             </div>
+
+
         </div>
     )
 }
