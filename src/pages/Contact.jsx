@@ -10,6 +10,7 @@ import Location from "../assets/contactlocation.jpg";
 import Phone from "../assets/contactphone.jpg";
 import Email from "../assets/contactemail.jpg";
 import WeChat from "../assets/contactwechat.jpg";
+import { div } from "framer-motion/client";
 
 const Contact = () => {
 
@@ -145,72 +146,78 @@ const Contact = () => {
                             action="mailto:detapowergensetindonesia@gmail.com"
                             method="POST"
                             encType="text/plain"
-                            className="flex flex-col gap-2 px-8 py-8 rounded-lg w-full">
-                                <h2 className="text-white font-bold text-xl mb-2">Message</h2>
-                                
-                                <h5>Message Content:</h5>
-                                <textarea
-                                    name="message"
-                                    placeholder="Please enter the message content"
-                                    className="border-1 border-gray-200 w-full p-2 rounded text-black mb-6"
-                                    rows={5}
-                                    required
-                                />
+                            className="flex flex-col gap-2 px-8 rounded-lg w-full">
 
-                                <h5>Phone:</h5>
-                                <input
-                                    type="text"
-                                    name="phone"
-                                    placeholder="Please enter your phone number"
-                                    className="border-1 border-gray-200 w-full p-2 rounded text-black mb-6"
-                                    required
-                                />
+                            <h2 className="text-white font-bold text-xl mb-2">Message</h2>
+                            
+                            <h5>Message Content:</h5>
+                            <textarea
+                                name="message"
+                                placeholder="Please enter the message content"
+                                className="border-1 border-gray-300 w-full p-3 rounded text-black mb-6 font-bold"
+                                rows={5}
+                                required
+                            />
 
-                                <div className="flex flex-col xl:flex-row justify-between items-center gap-16">
-                                    <div className="flex flex-row justify-between items-center gap-2 w-full">
-                                        <h5>Email:</h5>
-                                        <input
-                                            type="email"
-                                            name="email"
-                                            placeholder="Please input your email"
-                                            className="border-1 border-gray-200 w-full p-2 rounded text-black"
-                                            required
-                                        />
-                                    </div>
-                                    
-                                    <div className="flex flex-row justify-between items-center gap-2 w-full">
-                                        <h5>Address:</h5>
-                                        <input
-                                            type="text"
-                                            name="address"
-                                            placeholder="Please enter address"
-                                            className="border-1 border-gray-200 w-full p-2 rounded text-black"
-                                            required
-                                        />
-                                    </div>
-                                    
+                            <h5>Phone:</h5>
+                            <input
+                                type="text"
+                                name="phone"
+                                placeholder="Please enter your phone number"
+                                className="border-1 border-gray-300 w-full p-3 rounded text-black mb-6 font-bold"
+                                required
+                            />
+
+                            <div className="flex flex-col xl:flex-row justify-between items-center gap-16 mb-6">
+                                <div className="flex flex-row justify-between items-center gap-2 w-full">
+                                    <h5>Email:</h5>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Please input your email"
+                                        className="border-1 border-gray-300 w-full p-3 rounded text-black font-bold"
+                                        required
+                                    />
                                 </div>
                                 
+                                <div className="flex flex-row justify-between items-center gap-2 w-full">
+                                    <h5>Address:</h5>
+                                    <input
+                                        type="text"
+                                        name="address"
+                                        placeholder="Please enter address"
+                                        className="border-1 border-gray-300 w-full p-3 rounded text-black font-bold"
+                                        required
+                                    />
+                                </div>
+                            </div>
                                 
-                            <div className="flex flex-row items-center gap-2">
+                            <h5>Verivication Code:</h5>    
+                            <div className="flex flex-row items-center gap-2 mb-18">
                                 <input
                                     type="text"
                                     name="verification"
                                     placeholder="Verification Code"
-                                    className="bg-white flex-1 p-2 rounded text-black mb-6"
+                                    className="border-1 border-gray-300 bg-white p-3 rounded text-black w-50 font-bold"
                                     required
                                 />
 
-                                <span className="bg-white text-primary font-bold px-3 py-2 rounded select-none">p4Gmp</span>
+                                <span className="bg-white text-primary font-normal px-3 py-2 rounded select-none">p4Gmp</span>
                             </div>
                             
                             <button
                                 type="submit"
-                                className="bg-[#FFD105] text-black px-4 py-2 rounded hover:bg-opacity-80 transition">
+                                className="bg-primary text-white font-bold px-4 py-2 rounded hover:bg-opacity-80 transition">
                                     Submit
                             </button>
                         </form>
                     </div>
+                )}
+            </div>
+
+            <div>
+                {openrecruitment && (
+                    <div></div>
                 )}
             </div>
         </div>
