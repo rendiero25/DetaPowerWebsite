@@ -223,44 +223,44 @@ const Contact = () => {
 
             <div id="recruitment" className="py-20 px-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158">
                 {openrecruitment && (
-                    <div className="cursor-pointer" onClick={isActiveOpenRecruitment}>
+                    <div className={`${openrecruitmenttab ? "bg-primary" : "bg-gray-100"} cursor-pointer`} onClick={isActiveOpenRecruitment}>
                         <div className="flex flex-row justify-between items-center h-28">
-                            <div className={`${isActiveOpenRecruitment ? "bg-primary" : "bg-gray-100"} gap-4 px-8 py-6 w-full h-full flex flex-col justify-center items-start`}>
-                                <h4 className={`font-medium text-2xl ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`}>Seller</h4>
+                            <div className="gap-4 px-8 py-6 w-full h-full flex flex-col justify-center items-start">
+                                <h4 className={`font-medium text-2xl ${openrecruitmenttab ? "text-white" : "text-gray-500"}`}>Seller</h4>
                                 <div className="flex flex-col xl:flex-row gap-1 xl:gap-10 justify-start items-center">
-                                    <h5 className={`font-normal text-sm ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`}>Department: Sales Department</h5>
-                                    <h5 className={`font-normal text-sm ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`}>Release time: 2025-06-090</h5>
+                                    <h5 className={`font-bold text-sm ${openrecruitmenttab ? "text-white" : "text-gray-500"}`}>Department: Sales Department</h5>
+                                    <h5 className={`font-bold text-sm ${openrecruitmenttab ? "text-white" : "text-gray-500"}`}>Release time: 2025-06-090</h5>
                                 </div>
                             </div>
 
-                            <div className={`${isActiveOpenRecruitment ? "bg-primary" : "bg-gray-100"} px-10 flex justify-center items-center h-full`}>
-                                <IoAddCircleOutline className={`size-10 ${isActiveOpenRecruitment ? "text-white" : "text-gray-500"}`} />
+                            <div className={`${openrecruitmenttab ? "bg-primary" : "bg-gray-100"} px-10 flex justify-center items-center h-full`}>
+                                <IoAddCircleOutline className={`size-10 ${openrecruitmenttab ? "text-white" : "text-gray-500"}`} />
                             </div>
                         </div>
                     </div>
                 )}
 
-                {openrecruitmenttab && (
-                    <div className="bg-gray-200 cursor-pointer flex flex-col justify-center items-start gap-8 py-8 focus:bg-primary">
-                        <p className="font-normal text-black text-sm leading-7 px-8 py-4">
-                            1. Responsible for product market channel development and sales, and implement and complete the company's annual product sales plan. <br/>
-                            2. According to the company's marketing strategy, increase sales value, control costs, expand product sales in the area in charge, actively complete sales volume indicators, and expand product market share;<br/>
-                            3. Maintain good communication with customers and grasp customer needs in real time. Provide customers with active, enthusiastic, satisfactory and thoughtful service <br/>
-                            4. According to the company's products, prices and market strategies, independently handle inquiries, quotations, negotiation of contract terms and contract signing. In the process of executing the contract, coordinate and supervise the operation of various functional departments of the company. <br/>
-                            5. Dynamically grasp market prices, and regularly provide the company with market analysis and forecast reports and personal work weekly reports. <br/>
-                            6. Maintain and develop new sales channels and new customers, independently develop and expand upstream and downstream users, especially end users. <br/>
-                            7. Collect first-line marketing information and user opinions, and provide reference opinions on the company's marketing strategy, after-sales service, etc.
-                        </p>
+                <div className="transition-all duration-500 ease-in-out origin-top">
+                    {openrecruitmenttab && (
+                        <div className="bg-gray-100 cursor-pointer flex flex-col justify-center items-start gap-8 py-8">
+                            <p className="font-normal text-black text-sm leading-7 px-8 py-4">
+                                1. Responsible for product market channel development and sales, and implement and complete the company's annual product sales plan. <br/>
+                                2. According to the company's marketing strategy, increase sales value, control costs, expand product sales in the area in charge, actively complete sales volume indicators, and expand product market share;<br/>
+                                3. Maintain good communication with customers and grasp customer needs in real time. Provide customers with active, enthusiastic, satisfactory and thoughtful service <br/>
+                                4. According to the company's products, prices and market strategies, independently handle inquiries, quotations, negotiation of contract terms and contract signing. In the process of executing the contract, coordinate and supervise the operation of various functional departments of the company. <br/>
+                                5. Dynamically grasp market prices, and regularly provide the company with market analysis and forecast reports and personal work weekly reports. <br/>
+                                6. Maintain and develop new sales channels and new customers, independently develop and expand upstream and downstream users, especially end users. <br/>
+                                7. Collect first-line marketing information and user opinions, and provide reference opinions on the company's marketing strategy, after-sales service, etc.
+                            </p>
 
-                        <button className="bg-primary py-2 px-6 ml-8  flex flex-row justify-center items-center gap-4">
-                            <FiSend className="size-6 text-white"/>
-                            <h4 className="flex flex-row justify-center items-center gap-4 font-normal text-lg text-white">Submit your resume</h4>
-                        </button>
-                    </div>
-                )}
+                            <button className="bg-primary py-2 px-6 ml-8  flex flex-row justify-center items-center gap-4">
+                                <FiSend className="size-6 text-white"/>
+                                <h4 className="flex flex-row justify-center items-center gap-4 font-normal text-lg text-white">Submit your resume</h4>
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
-
-
         </div>
     )
 }

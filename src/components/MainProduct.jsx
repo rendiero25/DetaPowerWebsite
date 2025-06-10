@@ -9,6 +9,7 @@ import BuildingBackground from '../assets/building.jpg';
 
 const MainProduct = () => {
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {

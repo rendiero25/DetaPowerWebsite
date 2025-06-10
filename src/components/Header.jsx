@@ -91,7 +91,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center gap-2 group hover:text-primary' onMouseEnter={openProduct} onMouseLeave={closeProduct}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase group-hover:text-primary py-4 3xl:py-8 5xl:py-12 cursor-pointer'>Products</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase group-hover:text-primary py-4 3xl:py-8 5xl:py-12 cursor-pointer' onClick={() => navigate("/products")}>Products</li>
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             

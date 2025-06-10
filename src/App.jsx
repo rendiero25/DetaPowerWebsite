@@ -9,6 +9,7 @@ import Profile from './pages/Profile.jsx';
 import Application from "./pages/Application.jsx";
 import Service from "./pages/Service.jsx";
 import Contact from "./pages/Contact.jsx";
+import Products from "./pages/Products.jsx";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/application' element={<Application />} />
           <Route path='/service' element={<Service />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/products' element={<Products />} />
         </Routes>
 
         <Footer />
