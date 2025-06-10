@@ -69,7 +69,7 @@ const Header = () => {
 
                         <div className='relative flex flex-col justify-between items-center group hover:text-primary 5xl:gap-6 py-4 3xl:py-8 5xl:py-12' onMouseEnter={openabout} onMouseLeave={closeabout}>
                             <div className='flex flex-row justify-between items-center'>
-                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer'>About</li>
+                                <li className='font-bold text-lg 3xl:text-md 5xl:text-3xl uppercase cursor-pointer' onClick={() => navigate("/profile")}>About</li>
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                                 

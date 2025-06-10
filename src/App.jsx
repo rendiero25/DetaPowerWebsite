@@ -10,6 +10,7 @@ import Application from "./pages/Application.jsx";
 import Service from "./pages/Service.jsx";
 import Contact from "./pages/Contact.jsx";
 import Products from "./pages/Products.jsx";
+import ProductsCategory from "./pages/ProductsCategory.jsx";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/service' element={<Service />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/products' element={<Products />} />
+          <Route path='/products/:category' element={<ProductsCategory />} />
         </Routes>
 
         <Footer />

@@ -6,7 +6,7 @@
             {
                 "id": 1,
                 "name": "DTG164",
-                "image": "/productImages/dtg164-image.jpg",
+                "image": ["/productImages/dtg164-image.jpg"],
                 "description": "/productImages/dtg164-description.jpg",
                 "model": null
             },
@@ -14,7 +14,7 @@
             {
                 "id": 2,
                 "name": "DTG184",
-                "image": "/productImages/dtg184-image.jpg",
+                "image": ["/productImages/dtg184-image.jpg"],
                 "description": "/productImages/dtg184-description.jpg",
                 "model": null
             },
@@ -22,7 +22,7 @@
             {
                 "id": 3,
                 "name": "DTG224",
-                "image": "/productImages/dtg224-image.jpg",
+                "image": ["/productImages/dtg224-image.jpg"],
                 "description": "/productImages/dtg224-description.jpg",
                 "model": null
             },
@@ -30,7 +30,7 @@
             {
                 "id": 4,
                 "name": "DTG274",
-                "image": "/productImages/dtg274-image.jpg",
+                "image": ["/productImages/dtg274-image.jpg"],
                 "description": "/productImages/dtg274-description.jpg",
                 "model": null
             },
@@ -38,7 +38,7 @@
             {
                 "id": 5,
                 "name": "DTG314",
-                "image": "/productImages/dtg314-image.jpg",
+                "image": ["/productImages/dtg314-image.jpg"],
                 "description": "/productImages/dtg314-description.jpg",
                 "model": null
             },
@@ -46,7 +46,7 @@
             {
                 "id": 6,
                 "name": "DTG354",
-                "image": "/productImages/dtg354-image.jpg",
+                "image": ["/productImages/dtg354-image.jpg"],
                 "description": "/productImages/dtg354-description.jpg",
                 "model": null
             },
@@ -54,7 +54,7 @@
             {
                 "id": 7,
                 "name": "DTG404",
-                "image": "/productImages/dtg404-image.jpg",
+                "image": ["/productImages/dtg404-image.jpg"],
                 "description": "/productImages/dtg404-description.jpg",
                 "model": null
             },   
@@ -62,7 +62,7 @@
             {
                 "id": 8,
                 "name": "DTG454",
-                "image": "/productImages/dtg454-image.jpg",
+                "image": ["/productImages/dtg454-image.jpg"],
                 "description": "/productImages/dtg454-description.jpg",
                 "model": null
             }
@@ -227,7 +227,7 @@
             {
                 "id": 33,
                 "name": "Weichai",
-                "image": "/productImages/weichaisilentbox-image1.jpg",
+                "image": ["/productImages/weichaisilentbox-image1.jpg"],
                 "description": null,
                 "model": [
                     {
@@ -337,7 +337,7 @@
             {
                 "id": 53,
                 "name": "Parallel Systen",
-                "image": "/productImages/parallelsystem-image1.jpg",
+                "image": ["/productImages/parallelsystem-image1.jpg"],
                 "description": "/productImages/parallelsystem-description.jpg",
                 "model": null
             }
