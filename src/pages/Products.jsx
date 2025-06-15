@@ -1,23 +1,69 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Pagination from '@mui/material/Pagination';
+// import Pagination from '@mui/material/Pagination';
 import ProfileBanner from "../assets/profilebanner.jpg";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper/modules";
+import 'swiper/css';
+
 
 const ProductDetail = ({ product }) => (
-    <div className="flex flex-col gap-4 p-6">
-        <h2 className="text-2xl font-bold mb-4 text-primary">{product.name}</h2>
-        <div className="flex gap-6">
-            {/* Images */}
-            <div>
-                {product.image && product.image.map((img, idx) => (
-                    <img key={idx} src={img} alt={product.name} className="w-[18rem] mb-4" />
-                ))}
+    <div className="flex flex-col gap-4 p-6 ">
+        {/* <h2 className="text-2xl font-bold mb-4 text-primary">{product.name}</h2> */}
+        <div className="flex flex-col justify-between items-start gap-6">
+            
+            <div className="flex flex-row justify-between items-start gap-12">
+                <div>
+                    {product.image && product.image.length > 0 && (
+                        <div className="w-[30rem] mb-4">
+                        {/* Gambar utama */}
+                        <img src={product.image[0]} alt={product.name} className="w-full mb-2 rounded" />
+                        {/* Slide show jika ada lebih dari 1 gambar */}
+                        {product.image.length > 1 && (
+                        <Swiper
+                            modules={Pagination}
+                            spaceBetween={10}
+                            slidesPerView={1}
+                            pagination={{ clickable: true }}
+                            className="w-full"
+                        >
+                            {product.image.slice(1).map((img, idx) => (
+                            <SwiperSlide key={idx}>
+                                <img src={img} alt={`${product.name} ${idx + 2}`} className="w-full rounded" />
+                            </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        )}
+                    </div>
+                    )}
+                </div>
+
+                <div className="flex flex-col justify-between items-start gap-6 w-full">
+                    <div className="flex flex-col justify-between items-start w-full gap-4">
+                        <div className="text-3xl font-bold text-black">{product.name}</div>
+                        <div className="bg-gray-200 py-4 px-6 w-full text-black font-light flex flex-row gap-2">
+                            <h5 className="font-normal">Category</h5>
+                            <div className="font-normal">{product.name}</div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-row justify-between items-center gap-4">
+                        <a href="" className="bg-primary text-white font-normal text-md py-2 px-6 rounded-md">Inquire</a>
+                        <a href="" className="bg-primary text-white font-normal text-md py-2 px-6 rounded-md">Message</a>
+                    </div>
+                </div>
             </div>
-            {/* Description & model */}
-            <div>
+            
+            <div className="w-full">
                 {product.description && (
-                    <img src={product.description} alt="product-description" className="mb-2 w-50"/>
+                    <div className="flex flex-col justify-center items-center w-full">
+                        <div className="bg-primary flex justify-center w-full self-center font-normal py-2 text-lg text-white">
+                            <h4>Product Description</h4>
+                        </div>
+                        <img src={product.description} alt="product-description" className="w-ful h-full object-cover"/>
+                    </div>
+                    
                 )}
                 {product.model && Array.isArray(product.model) && (
                     <div>
@@ -103,20 +149,20 @@ const Products = () => {
         }
 
         return (
-            <div className="flex flex-col xl:pb-16">
+            <div className="flex flex-col xl:pb-16 bg-gray-100">
                 <div className="h-[9rem] xl:h-[15rem]">
                     <img src={ProfileBanner} alt="profilebanner-image" className="w-full h-full object-cover"/>
                 </div>
 
                 <Breadcrumbs linktopage={"/products"} pagename={"Products"}/>
 
-                <div className="flex flex-col xl:flex-row justify-between items-start gap-8 sm:px-12 xl:px-25 mt-20">
+                <div className="flex flex-col xl:flex-row justify-between items-start gap-8 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158 mt-20">
                     {/* Sidebar kategori */}
-                    <div className="flex flex-col justify-between items-center w-[25rem] drop-shadow-xl">
+                    <div className="flex flex-col justify-between items-center w-[20rem] drop-shadow-xl">
                         <h3 className="px-6 py-4 w-full bg-primary text-white font-bold text-2xl rounded-tr-3xl border-l-1 border-t-1 border-r-1 border-primary">Product Series</h3>
                         {products.map((cat, idx) => (
                             <div key={cat.categoryId}
-                                 className={`flex flex-row justify-between items-start px-6 py-4 border-l-1 border-r-1 border-b-1 border-gray-400 w-full hover:bg-gray-100 hover:border-l-5 hover:border-l-primary cursor-pointer
+                                 className={`bg-white flex flex-row justify-between items-start px-6 py-4 border-l-1 border-r-1 border-b-1 border-gray-400 w-full hover:bg-gray-100 hover:border-l-5 hover:border-l-primary cursor-pointer
                                  ${selectedCategory === cat.categoryName ? "font-bold" : ""}`}
                                  onClick={() => handleCategoryClick(cat.categoryName)}>
                                     <h3 className="text-black text-lg">{cat.categoryName}</h3>
