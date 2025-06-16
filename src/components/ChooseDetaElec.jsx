@@ -25,7 +25,7 @@ const ChooseDetaElec = () => {
                         solutions. Deta Electric has absorbed the world's advanced generator set design and 
                         manufacturing technology and advanced processing technology advantages.</p>
 
-                    <a href="#" className='px-14 py-3 bg-tertiary text-white'>View More &gt;</a>
+                    <a href="/profile" className='px-14 py-3 bg-tertiary text-white'>View More &gt;</a>
                 </div>
         </div>
     )

@@ -134,7 +134,7 @@ const TopMenu = () => {
                         <BiSearch className="text-white size-7 cursor-pointer"/>
                     </button>
                     {showSearch && (
-                        <div className="fixed inset-0 bg-primary/80 bg-opacity-40 flex justify-center items-start z-50">
+                        <div className="fixed inset-0 bg-primary/80 bg-opacity-40 flex justify-center items-start z-50 px-6">
                             <div className="bg-white rounded-lg shadow-lg mt-32 p-6 w-full max-w-md relative">
                                 <button className="absolute top-2 right-2 text-gray-500" onClick={() => setShowSearch(false)}>&times;</button>
                                 <h3 className="font-bold text-lg mb-2">Cari Produk</h3>

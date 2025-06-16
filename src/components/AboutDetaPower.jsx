@@ -12,7 +12,7 @@ const AboutDetaPower = () => {
     return(
         <div className="-mt-10 w-full">
             <div className="relative w-full h-[40rem] sm:h-[35rem] 3xl:h-[42rem] flex flex-col justify-center items-start">
-                <div className='absolute z-20 px-6 xl:px-25 3xl:px-85 4xl:px-85 flex flex-col justify-center items-start gap-6'>
+                <div className='px-6 xl:px-25 3xl:px-85 4xl:px-85 absolute z-20 flex flex-col justify-center items-start gap-6'>
                     <h1 className='font-bold text-4xl xl:text-5xl text-white max-w-xs sm:max-w-xl xl:max-w-3xl leading-tight uppercase'>Fujian Deta Electric Co.,LTD. High-Tech Enterprises</h1>
                     <p className='font-normal text-md text-white leading-normal xl:max-w-3xl'>
                         Deta Electric has passed ISO9001:2008, CE, VOV certification, and its products are 

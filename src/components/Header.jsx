@@ -58,7 +58,7 @@ const Header = () => {
         <div className="w-full">
             <div className='px-6 xl:px-25 3xl:px-85 4xl:px-158 flex flex-row justify-between items-center w-full h-full'>
                 <div className=''>
-                    <img src={Logo} alt="detapower-logo" className='w-55 3xl:w-65 5xl:w-90' onClick={() => navigate("/")}/>
+                    <img src={Logo} alt="detapower-logo" className='w-55 3xl:w-65 5xl:w-90 cursor-pointer' onClick={() => navigate("/")}/>
                 </div>
 
                 <div className='hidden xl:flex flex-row justify-between items-center w-auto h-full'>
@@ -73,7 +73,7 @@ const Header = () => {
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                                 
-                            <div className='flex justify-center items-center mt-[10rem] absolute w-full z-20'>
+                            <div className='flex justify-center items-center xl:mt-[10.1rem] 3xl:mt-[11.1rem] absolute w-full z-20'>
                                 {openaboutmenu && (
                                     <div className='absolute bg-primary shadow-lg py-2'>
                                         <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>
@@ -220,7 +220,7 @@ const Header = () => {
                                 <MdOutlineArrowDropDown className='text-black group-hover:text-primary size-6'/>
                             </div>
                             
-                            <div className='flex justify-center items-center mt-[10rem] xl:mt-[10rem] 2xl:mt-[10.2rem] 3xl:mt-[11.1rem] absolute w-full z-20'>
+                            <div className='flex justify-center items-center mt-[10rem] xl:mt-[10.1rem] 2xl:mt-[10.2rem] 3xl:mt-[11.1rem] absolute w-full z-20'>
                                 {openservicemenu && (
                                     <div className='absolute bg-primary shadow-lg py-2'>
                                         <ul className='flex flex-col w-[15rem] text-white font-bold text-lg'>

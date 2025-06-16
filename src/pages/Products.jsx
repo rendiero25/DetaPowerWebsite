@@ -15,36 +15,35 @@ import 'swiper/css/pagination';
 const ProductDetail = ({ product }) => {
     const [activeModelTab, setActiveModelTab] = useState(0);
     return (
-        <div className="flex flex-col gap-4 p-6 ">
+        <div className="flex flex-col gap-4">
             {/* <h2 className="text-2xl font-bold mb-4 text-primary">{product.name}</h2> */}
             <div className="flex flex-col justify-between items-start gap-6">
-                
-                <div className="flex flex-row justify-between items-start gap-12 w-full">
-                    <div>
+                <div className="flex flex-col xl:flex-row justify-between items-start gap-12">
+                    <div className="">
                         {product.image && product.image.length > 0 && (
-                            <div className="w-[30rem] mb-4">
-                            
-                            {/* <img src={product.image[0]} alt={product.name} className="w-full mb-2 rounded" /> */}
-                            {/* Slide show jika ada lebih dari 1 gambar */}
-                            {product.image.length > 0 && (
-                            <Swiper
-                                modules={[ Navigation, Autoplay]}
-                                spaceBetween={10}
-                                autoplay={{ delay: 2000, disableOnInteraction: false }}
-                                slidesPerView={1}
-                                // navigation={true}
-                                pagination={{ clickable: true }}
-                                loop={true}
-                                className="w-full"
-                            >
-                                {product.image.slice(0).map((img, idx) => (
-                                <SwiperSlide key={idx}>
-                                    <img src={img} alt={`${product.name} ${idx + 2}`} className="w-[25rem] h-full rounded" />
-                                </SwiperSlide>
-                                ))}
-                            </Swiper>
-                            )}
-                        </div>
+                            <div className="w-[20rem] mb-4">
+
+                                {/* <img src={product.image[0]} alt={product.name} className="w-full mb-2 rounded" /> */}
+                                {/* Slide show jika ada lebih dari 1 gambar */}
+                                {product.image.length > 0 && (
+                                    <Swiper
+                                        modules={[ Navigation, Autoplay]}
+                                        spaceBetween={10}
+                                        autoplay={{ delay: 2000, disableOnInteraction: false }}
+                                        slidesPerView={1}
+                                        // navigation={true}
+                                        pagination={{ clickable: true }}
+                                        loop={true}
+                                        className=""
+                                    >
+                                        {product.image.slice(0).map((img, idx) => (
+                                        <SwiperSlide key={idx}>
+                                            <img src={img} alt={`${product.name} ${idx + 2}`} className="w-[25rem] h-full rounded" />
+                                        </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+                                )}
+                            </div>
                         )}
                     </div>
 
@@ -64,7 +63,7 @@ const ProductDetail = ({ product }) => {
                     </div>
                 </div>
                 
-                <div className="w-full">
+                <div className="w-fit xl:w-full ">
                     {product.description && (
                         <div className="flex flex-col justify-center items-center w-full">
                             <div className="bg-primary flex justify-center w-full self-center font-normal py-2 text-lg text-white">
@@ -75,8 +74,8 @@ const ProductDetail = ({ product }) => {
                     )}
 
                     {product.model && Array.isArray(product.model) && product.model.length > 0 && (
-                        <div className="mt-6">
-                            <div className="flex flex-row mb-6">
+                        <div className="mt-6 w-full ">
+                            <div className="flex flex-col xl:flex-row mb-6">
                                 {product.model.map((m, idx) => (
                                     <button
                                         key={idx}
@@ -176,7 +175,7 @@ const Products = () => {
 
                 <Breadcrumbs linktopage={"/products"} pagename={"Products"}/>
 
-                <div className="flex flex-col xl:flex-row justify-between items-start gap-8 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158 mt-20">
+                <div className="flex flex-col xl:flex-row justify-between items-start gap-8 px-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158 mt-20">
                     {/* Sidebar kategori */}
                     <div className="flex flex-col justify-between items-center w-[20rem] drop-shadow-xl">
                         <h3 className="px-6 py-4 w-full bg-primary text-white font-bold text-2xl rounded-tr-3xl border-l-1 border-t-1 border-r-1 border-primary">Product Series</h3>
@@ -207,8 +206,8 @@ const Products = () => {
 
             <Breadcrumbs linktopage={"/products"} pagename={"Products"}/>
 
-            <div className="flex flex-col xl:flex-row justify-between items-start gap-8 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158 mt-20">
-                <div className="flex flex-col justify-between items-center w-[25rem] drop-shadow-xl">
+            <div className="flex flex-col xl:flex-row justify-between items-center xl:items-start gap-8 pb-10 px-6 sm:px-12 xl:px-25 3xl:px-85 4xl:px-158 mt-20">
+                <div className="flex flex-col justify-between items-center w-[20rem] xl:w-[25rem] drop-shadow-xl">
                     <h3 className="px-6 py-4 w-full bg-primary text-white font-bold text-2xl rounded-tr-3xl border-l-1 border-t-1 border-r-1 border-primary">Product Series</h3>
                     {products.map((cat, idx) => (
                         <div key={cat.categoryId}
@@ -221,7 +220,7 @@ const Products = () => {
                 </div>
 
                 <div className="flex flex-col justify-center items-center gap-6 w-full">
-                    <div id="allproducts" className="flex flex-wrap justify-start items-center gap-10">
+                    <div id="allproducts" className="flex flex-wrap justify-center xl:justify-start items-center gap-10">
                         {productsToShow.map(product => (
                             <div key={product.id} className="flex flex-col justify-center items-center gap-3">
                                 <img
