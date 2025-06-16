@@ -102,19 +102,31 @@ const Header = () => {
                                                                                   
                                             <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openDynamo} onMouseLeave={closeDynamo}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3 className='font-medium text-lg'>Dynamo</h3>
+                                                    <h3 className='font-medium text-lg cursor-pointer' onClick={() => navigate('/products/Dynamo')}>Dynamo</h3>
                                                     <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
                                                 </div>
 
                                                 <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
                                                     {opendynamo && (
                                                         <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG164</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG184</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG224</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG274</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG314</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>DTG354</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Dynamo/DTG164')}>
+                                                              DTG164
+                                                            </li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Dynamo/DTG184')}>
+                                                              DTG184
+                                                            </li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Dynamo/DTG224')}>
+                                                              DTG224
+                                                            </li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Dynamo/DTG274')}>
+                                                              DTG274
+                                                            </li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Dynamo/DTG314')}>
+                                                              DTG314
+                                                            </li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Dynamo/DTG354')}>
+                                                              DTG354
+                                                            </li>
                                                         </ul>
                                                     )}
                                                 </div>
@@ -124,18 +136,18 @@ const Header = () => {
 
                                             <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openDiesel} onMouseLeave={closeDiesel}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3 className='font-medium text-lg'>Open Diesel Generator</h3>
+                                                    <h3 className='font-medium text-lg cursor-pointer' onClick={() => navigate('/products/Open%20Diesel%20Generator')}>Open Diesel Generator</h3>
                                                     <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
                                                 </div>
 
                                                 <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
                                                     {opendiesel && (
                                                         <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Cummins</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Yuchai</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Weichai</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Xichai</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Shangchai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Open%20Diesel%20Generator/Cummins')}>Cummins</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Open%20Diesel%20Generator/Yuchai')}>Yuchai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Open%20Diesel%20Generator/Weichais')}>Weichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Open%20Diesel%20Generator/Xichai')}>Xichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Open%20Diesel%20Generator/Shangchai')}>Shangchai</li>
                                                         </ul>
                                                     )}
                                                 </div>
@@ -143,18 +155,18 @@ const Header = () => {
 
                                             <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openSilent} onMouseLeave={closeSilent}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3 className='font-medium text-lg'>Silent Box Diesel Generator</h3>
+                                                    <h3 className='font-medium text-lg cursor-pointer' onClick={() => navigate('/products/Silent%20Box%20Diesel%20Generator')}>Silent Box Diesel Generator</h3>
                                                     <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
                                                 </div>
 
                                                 <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
                                                     {opensilent && (
                                                         <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Cummins</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Yuchai</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Weichai</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Xichai</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Shangchai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Silent%20Box%20Diesel%20Generator/Cummins')}>Cummins</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Silent%20Box%20Diesel%20Generator/Yuchai')}>Yuchai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Silent%20Box%20Diesel%20Generator/Weichai')}>Weichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Silent%20Box%20Diesel%20Generator/Xichai')}>Xichai</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Silent%20Box%20Diesel%20Generator/Shangchai')}>Shangchai</li>
                                                         </ul>
                                                     )}
                                                 </div>
@@ -162,14 +174,14 @@ const Header = () => {
 
                                             <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openMobile} onMouseLeave={closeMobile}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3 className='font-medium text-lg'>Mobile Trailer</h3>
+                                                    <h3 className='font-medium text-lg cursor-pointer' onClick={() => navigate('/products/Mobile%20Trailer')}>Mobile Trailer</h3>
                                                     <FaAngleRight className='text-white inline-block ml-2 size-4 group-hover:text-primary' />
                                                 </div>
 
                                                 <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
                                                     {openmobile && (
                                                         <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Trailer</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Mobile%20Trailer/Container')}>Container</li>
                                                         </ul>
                                                     )}
                                                 </div>
@@ -177,16 +189,16 @@ const Header = () => {
 
                                             <li className='relative flex flex-row justify-between items-start py-2 px-4 cursor-pointer w-full group hover:bg-white hover:text-primary' onMouseEnter={openControl} onMouseLeave={closeControl}>
                                                 <div className='flex flex-row justify-between items-center w-full'>
-                                                    <h3 className='font-medium text-lg'>Control System</h3>
+                                                    <h3 className='font-medium text-lg cursor-pointer' onClick={() => navigate('/products/Control%20System')}>Control System</h3>
                                                     <FaAngleRight className='text-white inline-block ml-2  size-4 group-hover:text-primary' />
                                                 </div>
 
                                                 <div className='bg-primary absolute z-20 ml-[15.5rem] 3xl:ml-[16rem]'>
                                                     {opencontrol && (
                                                         <ul className='flex flex-col w-auto h-auto text-white font-bold text-lg'>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Automatic Switch</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Controller</li>
-                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary'>Parallel System</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Control%20System/Automatic%20Switch')}>Automatic Switch</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Control%20System/Controller')}>Controller</li>
+                                                            <li className='py-2 px-4 cursor-pointer w-full hover:bg-white hover:text-primary' onClick={() => navigate('/products/Control%20System/Parallel%20System')}>Parallel System</li>
                                                         </ul>
                                                     )}
                                                 </div>
